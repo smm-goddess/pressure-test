@@ -1,0 +1,27 @@
+{
+  "task": {
+    "totalGoRoutine": 5,
+    "totalTestCount": 20,
+    "timeout": 5
+  },
+  "target": {
+    "targetLink": "https://www.baidu.com/s",
+    "requestMethod": "get",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0"
+    },
+    "cookies": "",
+    "body": "",
+    "query": {
+      "wd": "<wd>"
+    },
+    "replace": [
+      {
+        "origin": "<wd>",
+        "format": "%s",
+        "params": "{{randSL(8)}}",
+        "location": "query"
+      }
+    ]
+  }
+}

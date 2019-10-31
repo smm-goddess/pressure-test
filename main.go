@@ -81,7 +81,7 @@ func runTest(ch chan int, outputChan chan bool) {
 		if len(data) > 0 {
 			reader = strings.NewReader(data)
 		} else {
-			reader = nil
+			reader = strings.NewReader("")
 		}
 		if req, err := http.NewRequest(requestMethod, target, reader); err == nil {
 			for key, value := range cfg.Headers {
